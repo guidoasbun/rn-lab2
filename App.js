@@ -8,8 +8,9 @@ export default function App() {
     <View style={styles.container}>
       <Text style={{ fontSize: 30 }}>Snap Eating Account</Text>
       {/* TODO (part 1): update these props with your favorite food item */}
-      <MenuItem name={null} price={null} imageSource={null} />
+      <MenuItem name={'Paella'} price={'3.50'} imageSource={require("./assets/paella.jpeg")} />
       {/* TODO (part 2): add another MenuItem! */}
+      <MenuItem name={'Albondigas'} price={'3.50'} imageSource={require('./assets/albondigas.jpeg')}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -17,6 +18,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 50,
     display: "flex",
     backgroundColor: "#fff",
     alignItems: "center",

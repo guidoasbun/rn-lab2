@@ -10,13 +10,10 @@ function MenuItem(props) {
   return (
     <View style={styles.container}>
       <View style={styles.photoContainer}>
-        <Image
-          source={require("../assets/placeholder-image.png")}
-          style={styles.photo}
-        />
+        <Image source={props.imageSource} style={styles.photo} />
       </View>
-      <Text style={{ fontWeight: "bold" }}>{"FOOD NAME"}</Text>
-      <Text>Price: ${1000}</Text>
+      <Text style={{ fontWeight: "bold" }}>{props.name}</Text>
+      <Text>Price: ${props.price}</Text>
       <Text>Quantity: {quantity}</Text>
       <View style={styles.buttonsContainer}>
         <Button
@@ -53,12 +50,12 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    rowGap: "10px",
+    // rowGap: 10,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "space-between",
     borderStyle: "solid",
-    borderWidth: "2px",
+    borderWidth: 2,
     width: "90%",
     padding: 30,
     margin: 20,
@@ -68,7 +65,8 @@ const styles = StyleSheet.create({
   },
   photo: {
     resizeMode: "contain",
-    width: "75%",
+    width: 150,
+    height: 150,
     padding: 50,
   },
   buttonsContainer: {
