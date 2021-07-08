@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Button, Image, TextInput } from "react-native";
 function MenuItem(props) {
   // Keep track of quantity
   const [quantity, setQuantity] = useState(0);
+  const [instructions, onSubmitEditing] = useState("");
   // TODO (part 3): add state for special instructions text
 
   // Return JSX to render
@@ -34,13 +35,14 @@ function MenuItem(props) {
           }}
         />
       </View>
-      <Text>Special Instructions: {null}</Text>
+      <Text>Special Instructions: {instructions}</Text>
       <TextInput
         placeholder="Type instructions here"
-        onSubmitEditing={({ nativeEvent }) => {
+        onSubmitEditing={({ nativeEvent, currentTarget }) => {
           console.log(nativeEvent.text);
+          onSubmitEditing(nativeEvent.text);
           // TODO (part 3): Update special instructions text
-          nativeEvent.target.clear();
+          currentTarget.clear();
         }}
       />
     </View>
