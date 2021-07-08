@@ -19,7 +19,9 @@ function MenuItem(props) {
         <Button
           title="-"
           onPress={() => {
-            console.log("minus pressed");
+            if (quantity > 0) {
+              setQuantity(quantity - 1);
+            }
             // TODO (part 2): decrease quantity by 1
             // watch out for negative quantity
           }}
@@ -27,7 +29,7 @@ function MenuItem(props) {
         <Button
           title="+"
           onPress={() => {
-            console.log("plus pressed");
+            setQuantity(quantity + 1);
             // TODO (part 2): increase quantity by 1
           }}
         />

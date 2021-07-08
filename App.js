@@ -7,9 +7,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 30 }}>Snap Eating Account</Text>
-      {/* TODO (part 1): update these props with your favorite food item */}
+      
       <MenuItem name={'Paella'} price={'3.50'} imageSource={require("./assets/paella.jpeg")} />
-      {/* TODO (part 2): add another MenuItem! */}
+     
       <MenuItem name={'Albondigas'} price={'3.50'} imageSource={require('./assets/albondigas.jpeg')}/>
       <StatusBar style="auto" />
     </View>
